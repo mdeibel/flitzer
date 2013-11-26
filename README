@@ -1,0 +1,37 @@
+Max Deibel and Alison Polton-Simon
+COSC 73 - Computational Linguistics
+Dartmouth College, November 2013
+
+Final Project: Simple Heuristic for Emailing Amorously ("Flitzing")
+// For our final project, we created a tool through which one can automatically
+// generate a flirty blitz, or "flitz." 
+
+How it works:
+// We gathered a corpus of ~250 flitzes. From there, we formatted each flitz to
+// correct for variations in word spelling, censor names and phone numbers, and
+// clean up some punctuation. We then begin generating words using a trigram
+// model, beginning from the first word of a random sentence. When we reach an
+// end of sentence punctuation mark, we switch to a bigram model for the next
+// word (so that we're effectively starting at a new random sentence).
+//
+// Our current program will always generate 3 sentences, as determined by 
+// counting the number of end punctuation marks we've generated. At this point,
+// we run a couple of helper functions over our generated sentences, which 
+// concatenates the words into a string (with appropriate white spacing) and 
+// optionally adds "flitzy" traits, like extra letters at the ends of words or
+// emoticons.
+//
+// We've also included a framework through which users can automatically email
+// any generated flitz. This requires the use of Telnet.
+
+How to use the app:
+// 1. Make sure you have NLTK and PIL installed .
+// 2. From the command line, run flitzer.py. Make sure Red_Heart2.gif and 
+//		flitzes.txt are in the same directory. A GUI will pop up. 
+// 3. Enter the name of the person you wish to flitz, then click "Flitz".
+//		[optionally, check "More flitzy" if you wish]
+// 4. A generated flitz appears! If you wish to automatically flitz someone,
+//		press "Send".
+// 5. Enter the recipient and sender emails in the respective boxes, then press
+//		"Mail me ;)".
+// 6. Your flitz has been sent! Good luck ;)
